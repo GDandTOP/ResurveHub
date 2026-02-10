@@ -1,0 +1,169 @@
+import { Product } from "@/types/product";
+
+/**
+ * 더미 상품 데이터
+ * 실제 운영에서는 API를 통해 데이터를 가져옵니다.
+ */
+export const dummyProducts: Product[] = [
+  {
+    id: "1",
+    name: "스터디룸 A",
+    description:
+      "조용하고 쾌적한 환경의 스터디룸입니다. 최대 4명까지 이용 가능하며, 화이트보드와 Wi-Fi가 제공됩니다.",
+    images: [
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&h=600&fit=crop",
+    ],
+    category: "스터디룸",
+    pricePerHour: 10000,
+    capacity: 4,
+    location: "서울특별시 강남구 테헤란로 123",
+    amenities: ["화이트보드", "Wi-Fi", "콘센트", "에어컨"],
+    availableTimeSlots: [
+      { dayOfWeek: 1, startTime: "09:00", endTime: "22:00" },
+      { dayOfWeek: 2, startTime: "09:00", endTime: "22:00" },
+      { dayOfWeek: 3, startTime: "09:00", endTime: "22:00" },
+      { dayOfWeek: 4, startTime: "09:00", endTime: "22:00" },
+      { dayOfWeek: 5, startTime: "09:00", endTime: "22:00" },
+    ],
+    status: "active",
+    createdAt: new Date("2024-01-01"),
+    updatedAt: new Date("2024-01-01"),
+  },
+  {
+    id: "2",
+    name: "회의실 B",
+    description:
+      "프로젝터와 대형 스크린이 구비된 회의실입니다. 프레젠테이션이나 세미나에 최적화되어 있습니다.",
+    images: [
+      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1431540015161-0bf868a2d407?w=800&h=600&fit=crop",
+    ],
+    category: "회의실",
+    pricePerHour: 25000,
+    capacity: 10,
+    location: "서울특별시 강남구 역삼로 456",
+    amenities: ["프로젝터", "스크린", "화이트보드", "Wi-Fi", "음향시설"],
+    availableTimeSlots: [
+      { dayOfWeek: 1, startTime: "09:00", endTime: "20:00" },
+      { dayOfWeek: 2, startTime: "09:00", endTime: "20:00" },
+      { dayOfWeek: 3, startTime: "09:00", endTime: "20:00" },
+      { dayOfWeek: 4, startTime: "09:00", endTime: "20:00" },
+      { dayOfWeek: 5, startTime: "09:00", endTime: "20:00" },
+    ],
+    status: "active",
+    createdAt: new Date("2024-01-02"),
+    updatedAt: new Date("2024-01-02"),
+  },
+  {
+    id: "3",
+    name: "스터디룸 C",
+    description:
+      "소규모 그룹 스터디에 적합한 공간입니다. 편안한 의자와 개인 책상이 제공됩니다.",
+    images: [
+      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1497366672149-e5e4b4d34eb3?w=800&h=600&fit=crop",
+    ],
+    category: "스터디룸",
+    pricePerHour: 8000,
+    capacity: 3,
+    location: "서울특별시 서초구 서초대로 789",
+    amenities: ["Wi-Fi", "콘센트", "에어컨", "개인 책상"],
+    availableTimeSlots: [
+      { dayOfWeek: 0, startTime: "10:00", endTime: "22:00" },
+      { dayOfWeek: 1, startTime: "09:00", endTime: "23:00" },
+      { dayOfWeek: 2, startTime: "09:00", endTime: "23:00" },
+      { dayOfWeek: 3, startTime: "09:00", endTime: "23:00" },
+      { dayOfWeek: 4, startTime: "09:00", endTime: "23:00" },
+      { dayOfWeek: 5, startTime: "09:00", endTime: "23:00" },
+      { dayOfWeek: 6, startTime: "10:00", endTime: "22:00" },
+    ],
+    status: "active",
+    createdAt: new Date("2024-01-03"),
+    updatedAt: new Date("2024-01-03"),
+  },
+  {
+    id: "4",
+    name: "세미나실 D",
+    description:
+      "대규모 행사와 세미나를 위한 넓은 공간입니다. 최신 음향 및 영상 장비가 완비되어 있습니다.",
+    images: [
+      "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&h=600&fit=crop",
+    ],
+    category: "세미나실",
+    pricePerHour: 50000,
+    capacity: 50,
+    location: "서울특별시 강남구 논현로 321",
+    amenities: [
+      "프로젝터",
+      "스크린",
+      "무선 마이크",
+      "음향시설",
+      "Wi-Fi",
+      "테이블 & 의자",
+    ],
+    availableTimeSlots: [
+      { dayOfWeek: 1, startTime: "09:00", endTime: "18:00" },
+      { dayOfWeek: 2, startTime: "09:00", endTime: "18:00" },
+      { dayOfWeek: 3, startTime: "09:00", endTime: "18:00" },
+      { dayOfWeek: 4, startTime: "09:00", endTime: "18:00" },
+      { dayOfWeek: 5, startTime: "09:00", endTime: "18:00" },
+    ],
+    status: "active",
+    createdAt: new Date("2024-01-04"),
+    updatedAt: new Date("2024-01-04"),
+  },
+  {
+    id: "5",
+    name: "프라이빗 스터디룸 E",
+    description:
+      "1인 전용 개인 스터디룸입니다. 집중력 향상을 위한 조용한 환경이 제공됩니다.",
+    images: [
+      "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop",
+    ],
+    category: "스터디룸",
+    pricePerHour: 5000,
+    capacity: 1,
+    location: "서울특별시 마포구 월드컵북로 654",
+    amenities: ["Wi-Fi", "콘센트", "에어컨", "개인 책상", "스탠드"],
+    availableTimeSlots: [
+      { dayOfWeek: 0, startTime: "00:00", endTime: "23:59" },
+      { dayOfWeek: 1, startTime: "00:00", endTime: "23:59" },
+      { dayOfWeek: 2, startTime: "00:00", endTime: "23:59" },
+      { dayOfWeek: 3, startTime: "00:00", endTime: "23:59" },
+      { dayOfWeek: 4, startTime: "00:00", endTime: "23:59" },
+      { dayOfWeek: 5, startTime: "00:00", endTime: "23:59" },
+      { dayOfWeek: 6, startTime: "00:00", endTime: "23:59" },
+    ],
+    status: "active",
+    createdAt: new Date("2024-01-05"),
+    updatedAt: new Date("2024-01-05"),
+  },
+  {
+    id: "6",
+    name: "회의실 F",
+    description:
+      "중소규모 회의와 팀 미팅에 적합한 공간입니다. 편안한 분위기에서 효율적인 회의가 가능합니다.",
+    images: [
+      "https://images.unsplash.com/photo-1497366412874-3415097a27e7?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&h=600&fit=crop",
+    ],
+    category: "회의실",
+    pricePerHour: 15000,
+    capacity: 6,
+    location: "서울특별시 성동구 왕십리로 987",
+    amenities: ["화이트보드", "Wi-Fi", "콘센트", "에어컨", "커피머신"],
+    availableTimeSlots: [
+      { dayOfWeek: 1, startTime: "09:00", endTime: "21:00" },
+      { dayOfWeek: 2, startTime: "09:00", endTime: "21:00" },
+      { dayOfWeek: 3, startTime: "09:00", endTime: "21:00" },
+      { dayOfWeek: 4, startTime: "09:00", endTime: "21:00" },
+      { dayOfWeek: 5, startTime: "09:00", endTime: "21:00" },
+    ],
+    status: "active",
+    createdAt: new Date("2024-01-06"),
+    updatedAt: new Date("2024-01-06"),
+  },
+];
