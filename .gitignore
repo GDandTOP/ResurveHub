@@ -157,3 +157,32 @@ storybook-static
 # *.draft.md
 # TODO.md
 # NOTES.md
+
+# Documentation files (개발 가이드 문서 - README.md 제외)
+*_SETUP.md
+*_GUIDE.md
+*_QUICKSTART.md
+*_SUMMARY.md
+*_INTEGRATION.md
+*_IMPLEMENTATION.md
+*_REQUIREMENTS.md
+*_FLOW.md
+*_FIX.md
+*_UPDATE.md
+*_REBUILD.md
+*_TEST*.md
+ProjectGuideForVibeCoding.md
+ADMIN_*.md
+PAYMENT_*.md
+NOTIFICATION_*.md
+REALTIME_*.md
+RESERVATION_*.md
+STORAGE_*.md
+IMAGE_*.md
+USER_*.md
+RLS_*.md
+AVAILABLE_*.md
+MYPAGE_*.md
+COMPLETE_*.md
+PORTONE_*.md
+SUPABASE_*.md
