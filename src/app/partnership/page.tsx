@@ -26,7 +26,7 @@ export default function PartnershipPage () {
               파트너십
             </h1>
             <p className="text-xl md:text-2xl opacity-90 font-light max-w-2xl mx-auto [letter-spacing:-0.01em]">
-              Your Space와 함께
+              Young King Space와 함께
               <br />
               새로운 기회를 만들어가세요
             </p>
@@ -40,10 +40,10 @@ export default function PartnershipPage () {
           <div className="max-w-4xl mx-auto space-y-16">
             <div className="text-center space-y-6">
               <h2 className="text-4xl md:text-5xl font-black [letter-spacing:-0.03em]">
-                왜 Your Space와 함께해야 할까요?
+                왜 Young King Space와 함께해야 할까요?
               </h2>
               <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-                Your Space는 공간 제공자와 사용자를 연결하는 신뢰할 수 있는 플랫폼입니다.
+                Young King Space는 공간 제공자와 사용자를 연결하는 신뢰할 수 있는 플랫폼입니다.
                 <br />
                 우리와 함께라면 더 많은 고객을 만나고 안정적인 수익을 창출할 수 있습니다.
               </p>
@@ -61,7 +61,7 @@ export default function PartnershipPage () {
                 파트너 혜택
               </h2>
               <p className="text-xl text-muted-foreground">
-                Your Space 파트너가 되면 누릴 수 있는 특별한 혜택
+                Young King Space 파트너가 되면 누릴 수 있는 특별한 혜택
               </p>
             </div>
 
@@ -310,7 +310,7 @@ export default function PartnershipPage () {
               지금 바로 시작하세요
             </h2>
             <p className="text-2xl opacity-90 font-light [letter-spacing:-0.01em]">
-              Your Space와 함께 성장할 파트너를 기다립니다
+              Young King Space와 함께 성장할 파트너를 기다립니다
             </p>
             <div className="pt-4">
               <a

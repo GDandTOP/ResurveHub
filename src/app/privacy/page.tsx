@@ -19,7 +19,7 @@ export default function PrivacyPage () {
               개인정보처리방침
             </h1>
             <p className="text-xl md:text-2xl opacity-90 font-light max-w-2xl mx-auto [letter-spacing:-0.01em]">
-              Your Space 개인정보처리방침
+              Young King Space 개인정보처리방침
             </p>
           </div>
         </div>
@@ -33,7 +33,7 @@ export default function PrivacyPage () {
               {/* 서문 */}
               <section className="space-y-4">
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Your Space(이하 "회사")는 정보통신망 이용촉진 및 정보보호 등에 관한 법률, 개인정보보호법 등 관련 법령상의 개인정보보호 규정을 준수하며, 이용자의 개인정보 보호에 최선을 다하고 있습니다.
+                  Young King Space(이하 "회사")는 정보통신망 이용촉진 및 정보보호 등에 관한 법률, 개인정보보호법 등 관련 법령상의 개인정보보호 규정을 준수하며, 이용자의 개인정보 보호에 최선을 다하고 있습니다.
                 </p>
               </section>
 

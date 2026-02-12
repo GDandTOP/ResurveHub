@@ -269,7 +269,7 @@ export default function SupportPage () {
                     서울특별시 강남구 테헤란로 123
                   </p>
                   <p className="text-muted-foreground">
-                    Your Space 빌딩 5층
+                    Young King Space 빌딩 5층
                   </p>
                   <p className="text-base text-muted-foreground">
                     지하철 2호선 강남역 3번 출구 도보 5분

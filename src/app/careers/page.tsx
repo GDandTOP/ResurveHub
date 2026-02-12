@@ -57,7 +57,7 @@ export default function CareersPage () {
               채용
             </h1>
             <p className="text-xl md:text-2xl opacity-90 font-light max-w-2xl mx-auto [letter-spacing:-0.01em]">
-              Your Space와 함께
+              Young King Space와 함께
               <br />
               미래를 만들어갈 인재를 기다립니다
             </p>
@@ -71,7 +71,7 @@ export default function CareersPage () {
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-16 space-y-4">
               <h2 className="text-4xl md:text-5xl font-black [letter-spacing:-0.03em]">
-                Your Space의 문화
+                Young King Space의 문화
               </h2>
               <p className="text-xl text-muted-foreground">
                 우리는 이런 환경에서 일합니다
@@ -358,7 +358,7 @@ export default function CareersPage () {
               지금 바로 지원하세요
             </h2>
             <p className="text-2xl opacity-90 font-light [letter-spacing:-0.01em]">
-              Your Space와 함께 성장할 인재를 기다립니다
+              Young King Space와 함께 성장할 인재를 기다립니다
             </p>
             <div className="pt-4">
               <a

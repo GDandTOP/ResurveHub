@@ -51,7 +51,7 @@ export function Footer() {
                 </div>
               </div>
               <span className="ml-3 text-3xl font-bold bg-gradient-to-r from-primary via-primary/90 to-primary/70 bg-clip-text text-transparent tracking-tight">
-                Your Space
+                Young King Space
               </span>
             </Link>
             <p className="text-base text-muted-foreground leading-relaxed max-w-xs">
@@ -83,7 +83,7 @@ export function Footer() {
 
         {/* 하단 저작권 */}
         <div className="mt-12 pt-8 border-t text-center">
-          <p className="text-sm text-muted-foreground">© {currentYear} Your Space. All rights reserved.</p>
+          <p className="text-sm text-muted-foreground">© {currentYear} Young King Space. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -19,7 +19,7 @@ export default function TermsPage () {
               이용약관
             </h1>
             <p className="text-xl md:text-2xl opacity-90 font-light max-w-2xl mx-auto [letter-spacing:-0.01em]">
-              Your Space 서비스 이용약관
+              Young King Space 서비스 이용약관
             </p>
           </div>
         </div>
@@ -34,7 +34,7 @@ export default function TermsPage () {
               <section className="space-y-4">
                 <h2 className="text-3xl font-bold">제1조 (목적)</h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  본 약관은 Your Space(이하 "회사")가 제공하는 공간 예약 서비스(이하 "서비스")의 이용과 관련하여 회사와 이용자 간의 권리, 의무 및 책임사항, 기타 필요한 사항을 규정함을 목적으로 합니다.
+                  본 약관은 Young King Space(이하 "회사")가 제공하는 공간 예약 서비스(이하 "서비스")의 이용과 관련하여 회사와 이용자 간의 권리, 의무 및 책임사항, 기타 필요한 사항을 규정함을 목적으로 합니다.
                 </p>
               </section>
 

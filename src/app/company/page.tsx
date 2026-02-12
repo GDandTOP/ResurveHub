@@ -19,7 +19,7 @@ export default function CompanyPage () {
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <div className="inline-flex items-center gap-2 px-8 py-4 bg-white/15 backdrop-blur-md rounded-full text-lg font-semibold mb-4 shadow-2xl border border-white/20 hover:bg-white/20 transition-all duration-300">
               <Sparkles className="h-5 w-5" strokeWidth={2.5} />
-              <span className="tracking-wide">Your Space 이야기</span>
+              <span className="tracking-wide">Young King Space 이야기</span>
             </div>
             
             <h1 className="text-5xl md:text-6xl font-black tracking-tight [letter-spacing:-0.03em]">
@@ -28,7 +28,7 @@ export default function CompanyPage () {
             <p className="text-xl md:text-2xl opacity-90 font-light max-w-2xl mx-auto [letter-spacing:-0.01em]">
               공간의 가치를 새롭게 정의하다
               <br />
-              Your Space와 함께하는 스마트한 공간 경험
+              Young King Space와 함께하는 스마트한 공간 경험
             </p>
           </div>
         </div>
@@ -40,7 +40,7 @@ export default function CompanyPage () {
           <div className="max-w-4xl mx-auto space-y-16">
             <div className="text-center space-y-6">
               <h2 className="text-4xl md:text-5xl font-black [letter-spacing:-0.03em]">
-                Your Space는
+                Young King Space는
               </h2>
               <p className="text-xl text-muted-foreground leading-relaxed">
                 공간 예약 플랫폼의 선두주자로서, 누구나 쉽고 간편하게 필요한 공간을 찾고 예약할 수 있는 서비스를 제공합니다.
@@ -121,7 +121,7 @@ export default function CompanyPage () {
                 핵심 가치
               </h2>
               <p className="text-xl text-muted-foreground">
-                Your Space가 추구하는 가치
+                Young King Space가 추구하는 가치
               </p>
             </div>
 
@@ -225,7 +225,7 @@ export default function CompanyPage () {
         <div className="relative container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto space-y-8">
             <h2 className="text-4xl md:text-5xl font-black [letter-spacing:-0.03em]">
-              Your Space와 함께 성장하세요
+              Young King Space와 함께 성장하세요
             </h2>
             <p className="text-2xl opacity-90 font-light [letter-spacing:-0.01em]">
               파트너십 및 채용 문의를 환영합니다

@@ -23,7 +23,7 @@ export default function AboutPage() {
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <div className="inline-flex items-center gap-2 px-8 py-4 bg-white/15 backdrop-blur-md rounded-full text-lg font-semibold mb-4 font-[family-name:var(--font-noto-sans-kr)] shadow-2xl border border-white/20 hover:bg-white/20 transition-all duration-300">
               <Sparkles className="h-5 w-5" strokeWidth={2.5} />
-              <span className="tracking-wide">Your Space를 소개합니다</span>
+              <span className="tracking-wide">Young King Space를 소개합니다</span>
             </div>
             
             <h1 className="text-5xl md:text-6xl font-black tracking-tight font-[family-name:var(--font-noto-sans-kr)] [letter-spacing:-0.03em]">
@@ -33,7 +33,7 @@ export default function AboutPage() {
               공간 예약의 새로운 기준
               <br>
               </br>
-               Your Space만의 특별한 장점을 경험해보세요
+               Young King Space만의 특별한 장점을 경험해보세요
             </p>
           </div>
         </div>
@@ -47,7 +47,7 @@ export default function AboutPage() {
               왜 저희를 선택해야 할까요?
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-[family-name:var(--font-noto-sans-kr)]">
-              Your Space만의 특별한 장점을 경험해보세요
+              Young King Space만의 특별한 장점을 경험해보세요
             </p>
           </div>
           
@@ -144,7 +144,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-4xl md:text-5xl font-black font-[family-name:var(--font-noto-sans-kr)] [letter-spacing:-0.03em]">
-              숫자로 보는 Your Space
+              숫자로 보는 Young King Space
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-[family-name:var(--font-noto-sans-kr)]">
               많은 고객들이 신뢰하는 서비스입니다
