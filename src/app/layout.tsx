@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Noto_Sans_KR, Playfair_Display } from "next/font/google";
 import "./globals.css";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
+import { RootLayoutWrapper } from "@/components/layout/RootLayoutWrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,6 +11,20 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+// 고급스러운 한글 폰트
+const notoSansKR = Noto_Sans_KR({
+  variable: "--font-noto-sans-kr",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "900"],
+});
+
+// 세련된 영문 디스플레이 폰트
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
@@ -25,13 +38,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko">
+    <html lang="ko" data-scroll-behavior="smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${notoSansKR.variable} ${playfair.variable} antialiased`}
+        suppressHydrationWarning
       >
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <RootLayoutWrapper>{children}</RootLayoutWrapper>
       </body>
     </html>
   );

@@ -62,13 +62,22 @@ src/
 │       └── StatisticsChart.tsx
 ├── lib/
 │   ├── utils.ts                  # 유틸리티 함수
-│   ├── db.ts                     # 데이터베이스 연결
-│   └── auth.ts                   # 인증 헬퍼 함수
+│   ├── auth.ts                   # 인증 함수 (Supabase Auth)
+│   ├── supabase/
+│   │   ├── client.ts            # 브라우저용 클라이언트
+│   │   ├── server.ts            # 서버용 클라이언트
+│   │   └── middleware.ts        # 미들웨어 헬퍼
+│   └── api/
+│       ├── products.ts          # 상품 API 함수
+│       ├── reservations.ts      # 예약 API 함수
+│       └── payments.ts          # 결제 API 함수
 ├── types/
-│   ├── user.ts                   # 사용자 타입
-│   ├── product.ts                # 상품 타입
-│   ├── reservation.ts            # 예약 타입
-│   └── payment.ts                # 결제 타입
+│   ├── supabase.ts               # Supabase 데이터베이스 타입
+│   ├── database.ts               # 타입 유틸리티
+│   ├── user.ts                   # 사용자 타입 (legacy)
+│   ├── product.ts                # 상품 타입 (legacy)
+│   ├── reservation.ts            # 예약 타입 (legacy)
+│   └── payment.ts                # 결제 타입 (legacy)
 └── api/                          # API 라우트 (또는 app/api/)
     ├── auth/
     │   ├── login/
@@ -193,10 +202,80 @@ interface Statistics {
 - **UI Components**: shadcn/ui
 - **State Management**: React Context API / Zustand
 - **Form Validation**: React Hook Form + Zod
-- **Database**: Prisma + PostgreSQL (또는 Supabase)
-- **Authentication**: NextAuth.js
+- **Database**: Supabase (PostgreSQL)
+- **Authentication**: Supabase Auth
 - **Payment**: 토스페이먼츠 / 카카오페이
 - **Calendar**: react-calendar 또는 date-fns
+
+## Supabase 연동 정보
+
+### 설치된 패키지
+- `@supabase/supabase-js`: Supabase JavaScript 클라이언트
+- `@supabase/ssr`: Next.js App Router를 위한 SSR 헬퍼
+
+### 클라이언트 파일 위치
+- `src/lib/supabase/client.ts`: 브라우저용 클라이언트 (Client Components)
+- `src/lib/supabase/server.ts`: 서버용 클라이언트 (Server Components, Server Actions)
+- `src/lib/supabase/middleware.ts`: 미들웨어 헬퍼 함수
+
+### API 함수 위치
+- `src/lib/api/products.ts`: 상품 CRUD 함수
+- `src/lib/api/reservations.ts`: 예약 CRUD 함수
+- `src/lib/api/payments.ts`: 결제 CRUD 함수
+- `src/lib/auth.ts`: 인증 관련 함수 (회원가입, 로그인, 로그아웃)
+
+### 타입 정의
+- `src/types/supabase.ts`: Supabase 데이터베이스 타입
+- `src/types/database.ts`: 애플리케이션용 타입 유틸리티
+
+### SQL 마이그레이션
+- `supabase/migrations/001_create_tables.sql`: 테이블 생성
+- `supabase/migrations/002_row_level_security.sql`: RLS 정책 설정
+- `supabase/migrations/003_seed_data.sql`: 테스트 데이터
+
+### 환경 변수
+```bash
+NEXT_PUBLIC_SUPABASE_URL=your-project-url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
+SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
+```
+
+### 사용 예제
+
+#### Server Component에서 데이터 조회
+```typescript
+import { createServerSupabaseClient } from '@/lib/supabase/server'
+
+const supabase = await createServerSupabaseClient()
+const { data, error } = await supabase.from('products').select('*')
+```
+
+#### Client Component에서 데이터 조회
+```typescript
+import { getProducts } from '@/lib/api/products'
+
+const products = await getProducts()
+```
+
+#### 인증
+```typescript
+import { signUp, signIn, signOut } from '@/lib/auth'
+
+// 회원가입
+await signUp(email, password, name, phone)
+
+// 로그인
+await signIn(email, password)
+
+// 로그아웃
+await signOut()
+```
+
+### 보안 규칙
+- Row Level Security (RLS) 활성화됨
+- 사용자는 자신의 데이터만 접근 가능
+- 관리자는 모든 데이터 접근 가능
+- `service_role key`는 서버 사이드에서만 사용
 
 ## 주요 기능
 

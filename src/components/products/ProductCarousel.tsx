@@ -20,24 +20,34 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { dummyProducts } from "@/data/products";
+import type { Product } from "@/types/product";
+
+interface ProductCarouselProps {
+  products: Product[];
+}
 
 /**
  * 상품 자동 슬라이드 Carousel 컴포넌트
  * 메인 페이지에서 상품을 자동으로 슬라이드하여 보여줍니다.
  */
-export function ProductCarousel() {
+export function ProductCarousel({ products }: ProductCarouselProps) {
   const router = useRouter();
+  
   const plugin = React.useRef(
     Autoplay({ delay: 3000, stopOnInteraction: true })
   );
 
-  // 첫 4개의 상품만 표시
-  const featuredProducts = dummyProducts.slice(0, 4);
-
   const handleViewProduct = (productId: string) => {
     router.push(`/products/${productId}`);
   };
+
+  if (products.length === 0) {
+    return (
+      <div className="w-full max-w-5xl mx-auto px-4 py-20 text-center">
+        <p className="text-muted-foreground">등록된 상품이 없습니다.</p>
+      </div>
+    );
+  }
 
   return (
     <div className="w-full max-w-5xl mx-auto px-4">
@@ -51,21 +61,27 @@ export function ProductCarousel() {
         onMouseLeave={plugin.current.reset}
       >
         <CarouselContent>
-          {featuredProducts.map((product) => (
+          {products.map((product) => (
             <CarouselItem key={product.id}>
               <div className="p-1">
                 <Card className="overflow-hidden">
                   <div className="grid md:grid-cols-2 gap-0">
                     {/* 이미지 섹션 */}
-                    <div className="relative h-64 md:h-96 w-full">
-                      <Image
-                        src={product.images[0]}
-                        alt={product.name}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                        priority
-                      />
+                    <div className="relative h-64 md:h-96 w-full bg-muted">
+                      {product.images && product.images.length > 0 && product.images[0] ? (
+                        <Image
+                          src={product.images[0]}
+                          alt={product.name}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 768px) 100vw, 50vw"
+                          priority
+                        />
+                      ) : (
+                        <div className="flex items-center justify-center h-full">
+                          <p className="text-muted-foreground">이미지 없음</p>
+                        </div>
+                      )}
                       <div className="absolute top-4 left-4 bg-primary text-primary-foreground px-3 py-1.5 rounded-md text-sm font-semibold">
                         {product.category}
                       </div>
